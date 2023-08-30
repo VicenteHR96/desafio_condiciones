@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Store</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/72d28c97fa.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="menu">
+        <div class="logo">
+          <img src="assets/imgs/logo.png" alt="Logo de Mobile Media" />
+        </div>
+        <i class="fa fa-bars fa-xl" style="color: #e3e3e3"></i>
+        <div class="contenido-menu">
+          <ul>
+            <a href="../index.html"><li>Inicio</li></a>
+            <a href="../ejercicio_bordes/index.html"
+              ><li>Ejercicio Bordes</li></a
+            >
+            <a href="#"><li>Ejercicio Stickers</li></a>
+            <a href="../ejercicio_password/index.html"
+              ><li>Ejercicio Password</li></a
+            >
+          </ul>
+        </div>
+      </div>
+      <div class="main">
+        <div class="cont1 conts">
+          <h1>Ejercicio Stickers</h1>
+        </div>
+        <div class="cont2 conts">
+          <h2>Puedes llevar hasta 10 stickers en total.</h2>
+          <div class="cont-stickers">
+            <div class="sticker">
+              <img src="assets/imgs/Everton.png" />
+              <input type="number" min="0" step="1" value="0" id="input1" />
+            </div>
+            <div class="sticker">
+              <img src="assets/imgs/Santiago-Wanderers.png" />
+              <input type="number" min="0" step="1" value="0" id="input2" />
+            </div>
+            <div class="sticker">
+              <img src="assets/imgs/Colo-Colo.png" />
+              <input type="number" min="0" step="1" value="0" id="input3" />
+            </div>
+          </div>
+          <div class="verificar">
+            <h3 id="mensaje"></h3>
+            <button id="btn-verificar">Verificar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
