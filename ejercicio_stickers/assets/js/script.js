@@ -6,11 +6,15 @@ const input3 = document.querySelector("#input3");
 const btnVerificar = document.querySelector("#btn-verificar");
 const mensajeValidacion = document.querySelector("#mensaje");
 
-//Métodos
+// Métodos
 
-function filtro() {
-  var tecla = event.key;
-  if ([".", ",", "-", "e"].includes(tecla)) event.preventDefault();
+function filtro(event) {
+  const tecla = event.key;
+
+  // Evitar ., -, y e
+  if ([".", ",", "-", "e"].includes(tecla)) {
+    event.preventDefault();
+  }
 }
 
 const verificar = () => {
@@ -29,6 +33,11 @@ const verificar = () => {
   }
 };
 
-//Eventos
+// Eventos
 
 btnVerificar.addEventListener("click", verificar);
+
+// Agregar evento de filtro para evitar números decimales
+input1.addEventListener("keydown", filtro);
+input2.addEventListener("keydown", filtro);
+input3.addEventListener("keydown", filtro);
