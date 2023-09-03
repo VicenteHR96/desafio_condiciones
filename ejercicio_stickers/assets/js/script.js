@@ -8,27 +8,24 @@ const mensajeValidacion = document.querySelector("#mensaje");
 
 //Métodos
 
+function filtro() {
+  var tecla = event.key;
+  if ([".", ",", "-", "e"].includes(tecla)) event.preventDefault();
+}
+
 const verificar = () => {
   const valor1 = Number(input1.value);
   const valor2 = Number(input2.value);
   const valor3 = Number(input3.value);
   const totalStickers = valor1 + valor2 + valor3;
 
-  if (valor1 < 0 || valor2 < 0 || valor3 < 0) {
-    mensajeValidacion.innerHTML = "No se permiten cantidades negativas.";
-    mensajeValidacion.style.color = "red";
-  } else if (valor1 % 1 !== 0 || valor2 % 1 !== 0 || valor3 % 1 !== 0) {
-    mensajeValidacion.innerHTML = "No se permiten cantidades con decimales.";
+  if (totalStickers > 10) {
+    mensajeValidacion.innerHTML = "No se permiten cantidades mayores a 10.";
     mensajeValidacion.style.color = "red";
   } else {
-    if (totalStickers > 10) {
-      mensajeValidacion.innerHTML = "No se permiten cantidades mayores a 10.";
-      mensajeValidacion.style.color = "red";
-    } else {
-      mensajeValidacion.innerHTML =
-        "Has agregado " + totalStickers + " Stickers.";
-      mensajeValidacion.style.color = "black";
-    }
+    mensajeValidacion.innerHTML =
+      "Has agregado " + totalStickers + " Stickers.";
+    mensajeValidacion.style.color = "black";
   }
 };
 

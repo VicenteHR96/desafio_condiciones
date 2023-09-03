@@ -45,7 +45,14 @@
           <div class="cont-stickers">
             <div class="sticker">
               <img src="assets/imgs/Everton.png" />
-              <input type="number" min="0" step="1" value="0" id="input1" />
+              <input
+                type="number"
+                min="0"
+                max="10"
+                value="0"
+                id="input1"
+                onkeydown="filtro()"
+              />
             </div>
             <div class="sticker">
               <img src="assets/imgs/Santiago-Wanderers.png" />
